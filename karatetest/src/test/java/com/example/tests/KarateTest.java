@@ -1,15 +1,13 @@
-package com.example.tests;
+package com.example.tests;  // Assure-toi que ce package est correct
 
 import com.intuit.karate.junit5.Karate;
 
-class KarateTest {
+class TestRunner {
 
     @Karate.Test
     Karate testAll() {
-        // Inclure plusieurs fichiers feature
-        return Karate.run("simple","test").relativeTo(getClass());
-
-
+        // Utilisation de .feature files "Token" et "Rating", relatifs à cette classe
+        return Karate.run("Token","Rating","Token-DS","Token-INVAL","Token-BCUMAN").relativeTo(getClass());
 
     }
 }
