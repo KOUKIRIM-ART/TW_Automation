@@ -7,7 +7,7 @@ class TestRunner {
     @Karate.Test
     Karate testAll() {
         // Utilisation de .feature files "Token" et "Rating", relatifs à cette classe
-        return Karate.run( "classpath:com/example/tests/Rating.feature");
+        return Karate.run("Token","Rating","Token-DS","Token-INVAL","Token-BCUMAN").relativeTo(getClass());
 
     }
 }
