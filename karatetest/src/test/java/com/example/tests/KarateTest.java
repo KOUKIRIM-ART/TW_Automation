@@ -8,5 +8,8 @@ class KarateTest {
     Karate testAll() {
         // Inclure plusieurs fichiers feature
         return Karate.run("simple","test").relativeTo(getClass());
+
+
+
     }
 }
